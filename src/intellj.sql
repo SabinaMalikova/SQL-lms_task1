@@ -117,7 +117,6 @@ create table cars
 
 alter table cars
     rename column car_price to car_price_$;
---subjects at the university
 
 insert into cars(car_brand_name, car_model_name, car_country_of_origin, car_color, car_release_date, car_price_$)
 VALUES ('toyota', 'camry', 'Япония', 'white', '2023-12-12', 55.000),
