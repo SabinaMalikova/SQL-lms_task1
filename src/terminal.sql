@@ -30,3 +30,28 @@ INSERT 0 8
 CREATE TABLE
     lms_task1=# insert into games(game_name, game_type, game_for_gender) VALUES ('mafia','board game', 'universal'),('uno', 'board game', 'universal'),('tennis','active game','universal'),('doll','board game','female'),('cars','board game','male'),('chess','board game','universal');
 INSERT 0 6
+    lms_task1=# create table regions(id serial primary key, region_name varchar(50) not null, area_of_the_region varchar(50) not null );
+CREATE TABLE
+    lms_task1=# alter table regions drop column area_of_the_region;
+ALTER TABLE
+    lms_task1=# alter table regions add column area_of_the_region double precision;
+ALTER TABLE
+    lms_task1=# insert into regions(region_name, area_of_the_region) VALUES ('Batken', 17.048),('Chuy', 20.2), ('Jalal-Abad', 33.7),('Issyk-Kul', 6.236),('Naryn', 40.5),('Talas', 13),('Osh', 29);
+INSERT 0 7
+INSERT 0 7
+    lms_task1=#  create  table  products (products_name varchar(50) not null, products_price int not null);
+CREATE TABLE
+    lms_task1=# insert into products(products_name, products_price) VALUES ('bread', 35), ('water',80),('oil',180),('butter',120),('salt',30),('pepper',40),('rice',170),('noodles',130),('eggs',160),('milk',70),('cream',150),('cheese',330),('fruits',460),('vegetables',740);
+INSERT 0 14
+    lms_task1=# create table phone_model (phone_name varchar(50) not null, phone_price_$ int not null, phone_color varchar(50) not null);
+CREATE TABLE
+    lms_task1=# insert into phone_model(phone_name, phone_price_$, phone_color) VALUES ('iPhone 11',400,'purple'),  ('iPhone 12 pro', 600 ,'white'), ('iPhone 13',620 ,'black'), ('iPhone 14 pro max',840 ,'pink'), ('iPhone 15', 850,'white'), ('samsung s23',670,'green'), ('samsung zip5',980,'white'), ('samsung egl',300,'yellow'), ('samsung flat',420,'blue'), ('mi 9',210,'white'), ('mi 11',250,'red'), ('mi 15',280,'pink'), ('mi f4',320,'white'), ('poco x3',450,'green'), ('poco x4',510,'black'), ('poco x5',630,'white');
+INSERT 0 16
+    lms_task1=# create table residence_house(id serial primary key, residence_type varchar(50) not null, residence_address varchar not null, id_who_lives int references peoples(id));
+CREATE TABLE
+    lms_task1=# insert into residence_house(residence_type, residence_address, id_who_lives) values  ('house','Berlin',6),('apartment','Seoul',9),('house','Almaty',3),('house','Moscow',7),('house','Astana',5),('apartment','Seoul',2),('apartment','Baku',4),('apartment','Bishkek',1),('house','Morocco',8),('apartment','LA',10);
+INSERT 0 10
+    lms_task1=# create table furniture(id serial primary key, Furniture_name varchar(50) not null, color varchar(50) not null, material varchar(50) not null);
+CREATE TABLE
+    lms_task1=# insert into furniture(furniture_name, color, material) values ('chair','grey','wood'),('table','white','wood'),('sofa','blue','leather'),('bed','pink','iron'),('cupboard','yellow','wood'),('bookcase','black','wood'),('Desk','white','plastic'),('fireplace','red','brick');
+INSERT 0 8
